@@ -1,3 +1,5 @@
 # Task manifests
 
-当前没有发布训练任务。提交任务后运行 `python3 queue.py refresh-index --repo ai-macro-quant/experiment-queue` 刷新索引。
+| Task | Status | Title | Source package |
+|---|---|---|---|
+| [system-smoke-1794636081](system-smoke-1794636081.json) | queued | 系统流程自检（不是模型训练） | [task-system-smoke-1794636081](../../releases/tag/task-system-smoke-1794636081) |
