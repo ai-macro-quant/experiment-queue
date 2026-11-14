@@ -21,3 +21,5 @@ ZIP SHA256: `b59d0332f26ddc1ecccabd33b7426af738ec61e8bcc927d03621944b08c185a4`
 - `run/full_daily_metrics.csv`
 - `run/test_attention/metadata.json`
 - `run/test_attention/*.npz`
+
+[查看失败原因](FAILURE.md)
