@@ -1,0 +1,75 @@
+{
+  "best_epoch": 7,
+  "epochs_ran": 27,
+  "early_stopping": true,
+  "warmup_epochs": 5,
+  "patience": 20,
+  "stop_reason": "early_stopping",
+  "device": "cpu",
+  "data_quality": {
+    "loading": "one-time database preload; in-memory arrays; no raw disk cache",
+    "chunk_days": 5,
+    "lookback": 20,
+    "normalization": "daily_zscore",
+    "stock_clip": 5.0,
+    "cached_dates": 1396,
+    "cached_stocks": 4277,
+    "resident_array_bytes": 285357068,
+    "valid_days": {
+      "train": 945,
+      "valid": 238,
+      "test": 179,
+      "full": 1377
+    },
+    "coverage_complete_days": 1377,
+    "note": "Array bytes exclude Python objects, temporary load DataFrames, current sample tensors and model memory."
+  },
+  "objective": "negative daily Pearson IC; equal weight per signal day",
+  "label_purge": "future label endpoint must be within its split",
+  "splits": {
+    "train": {
+      "days": 945,
+      "stock_days": 2867975,
+      "first_date": "2021-01-29",
+      "last_date": "2024-12-24",
+      "mean_ic": 0.042721165259753446,
+      "mean_rank_ic": 0.056579165852110376,
+      "valid_ic_days": 945,
+      "cumulative_ic": 40.371501170467006,
+      "cumulative_rank_ic": 53.46731173024425
+    },
+    "valid": {
+      "days": 238,
+      "stock_days": 713071,
+      "first_date": "2025-01-02",
+      "last_date": "2025-12-24",
+      "mean_ic": 0.03185058236835646,
+      "mean_rank_ic": 0.0489617186565952,
+      "valid_ic_days": 238,
+      "cumulative_ic": 7.580438603668835,
+      "cumulative_rank_ic": 11.652889040269647
+    },
+    "test": {
+      "days": 179,
+      "stock_days": 533331,
+      "first_date": "2026-01-05",
+      "last_date": "2026-09-28",
+      "mean_ic": 0.022795209880589223,
+      "mean_rank_ic": 0.04029618302134209,
+      "valid_ic_days": 179,
+      "cumulative_ic": 4.080342568625469,
+      "cumulative_rank_ic": 7.213016760820238
+    },
+    "full": {
+      "days": 1377,
+      "stock_days": 4159210,
+      "first_date": "2021-01-29",
+      "last_date": "2026-10-12",
+      "mean_ic": 0.03775903478708409,
+      "mean_rank_ic": 0.05253204444388135,
+      "valid_ic_days": 1377,
+      "cumulative_ic": 51.994190901814804,
+      "cumulative_rank_ic": 72.33662519922459
+    }
+  }
+}
