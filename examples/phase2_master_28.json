@@ -1,0 +1,30 @@
+{
+  "example_only": true,
+  "notice": "这是待编辑的任务示例，不会自动排队。若相同实验正在服务器运行，不要重复提交。",
+  "task_id": "zz1000-master-20x23-four-splits-v0-v6-REPLACE",
+  "title": "中证1000 MASTER 20×23：V0—V6各四组划分（28次训练）",
+  "project": "../阶段2_模型训练",
+  "command": [
+    "{python}", "-u", "src/train_time_cv.py",
+    "--learning-rate", "0.001",
+    "--weight-decay", "0.0001",
+    "--dropout", "0.1",
+    "--epochs", "300",
+    "--patience", "20",
+    "--warmup-epochs", "5",
+    "--seed", "42",
+    "--env-file", "{env_file}",
+    "--output", "{output_dir}"
+  ],
+  "required_patterns": [
+    "summary.csv",
+    "version_fixed_test_summary.csv",
+    "V*/group_*/trials/*/attempt_*/best.pt",
+    "V*/group_*/trials/*/attempt_*/metrics.json",
+    "V*/group_*/trials/*/attempt_*/epoch_ic.png",
+    "V*/group_*/trials/*/attempt_*/full_cumulative_ic_rankic.png",
+    "V*/group_*/trials/*/attempt_*/fixed_test_cumulative_ic_rankic.png"
+  ],
+  "expected_runs": 28,
+  "completion_review": "不仅检查文件模式有匹配；必须核实summary.csv的28行全部completed，并核实每个版本每组的best.pt、指标和图都存在。"
+}

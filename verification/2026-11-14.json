@@ -1,0 +1,27 @@
+{
+  "task_id": "system-smoke-1794636081",
+  "started_at": "2026-11-14T06:01:21Z",
+  "checks": [
+    "Task source submitted to private GitHub release",
+    "Atomic task claim succeeded",
+    "Second worker rejected for already claimed task",
+    "Frozen source downloaded, checksum verified, credentials excluded",
+    "Full synthetic results uploaded and remote bytes verified",
+    "Repeating result upload accepted identical immutable archive",
+    "Task and result index report completion"
+  ],
+  "finished_at": "2026-11-14T06:09:38Z",
+  "status": "passed",
+  "synthetic_remote_fixtures_removed": true,
+  "repository": "https://github.com/ai-macro-quant/experiment-queue",
+  "local_tests_passed": 11,
+  "models_trained": 0,
+  "server_worker_installed": false,
+  "source_bundle_review": {
+    "project": "阶段2_模型训练",
+    "files": 46,
+    "credentials_excluded": true,
+    "source_and_config_extracted": true
+  },
+  "python_310_syntax_checked": true
+}

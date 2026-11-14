@@ -1,4 +1,6 @@
-# Result records
+# 实验结果列表
 
-| Task | Status | Results |
+[返回实验中心](../README.md)
+
+| 任务 | 状态 | 完整训练结果 |
 |---|---|---|
