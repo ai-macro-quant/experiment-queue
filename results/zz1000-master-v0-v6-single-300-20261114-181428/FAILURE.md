@@ -1,6 +1,6 @@
 # 失败原因
 
-训练进程以非零退出码结束。具体原因尚未确认，请查看完整归档中的训练日志。
+The launcher created the output directory before training. The training script expected to create it and exited with FileExistsError (WinError 183).
 
 - 退出码 1
 
