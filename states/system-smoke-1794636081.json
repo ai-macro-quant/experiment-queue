@@ -1,5 +1,8 @@
 {
   "task_id": "system-smoke-1794636081",
-  "status": "queued",
-  "updated_at": "2026-11-14T06:01:25+00:00"
+  "status": "running",
+  "worker": "local-system-verification",
+  "claimed_at": "2026-11-14T06:08:49+00:00",
+  "claim_commit": "c0887b53c8eb46d9e76679bf0cdbcf00d830571d",
+  "updated_at": "2026-11-14T06:08:51+00:00"
 }
