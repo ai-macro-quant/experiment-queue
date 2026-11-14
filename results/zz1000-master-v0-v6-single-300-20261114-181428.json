@@ -1,0 +1,72 @@
+{
+  "task_id": "zz1000-master-v0-v6-single-300-20261114-181428",
+  "tag": "result-zz1000-master-v0-v6-single-300-20261114-181428",
+  "archive_sha256": "3a2a415887f808e1f09d5bf69fa7065d1ae2c42a4de34c2b03ff7d5c101fada1",
+  "assets": [
+    "results-zz1000-master-v0-v6-single-300-20261114-181428.zip"
+  ],
+  "manifest": {
+    "task_id": "zz1000-master-v0-v6-single-300-20261114-181428",
+    "worker": "desktop-dcm9hbn-attention",
+    "command": [
+      "{python}",
+      "-u",
+      "src/train_master_v0_v6.py",
+      "--data-config",
+      "database_config.json",
+      "--learning-rate",
+      "0.001",
+      "--weight-decay",
+      "0.0001",
+      "--dropout",
+      "0.1",
+      "--seed",
+      "42",
+      "--env-file",
+      "{env_file}",
+      "--output",
+      "{output_dir}"
+    ],
+    "source_package_sha256": "8777157319ce719bcb567f397ecb072b79f4d53ef544d62d4198210a5d9ac758",
+    "exit_code": 1,
+    "started_at": "2026-11-14T12:11:17+00:00",
+    "finished_at": "2026-11-14T12:11:27+00:00",
+    "latest_output_mtime": "2026-11-14T12:11:26+00:00",
+    "files": [
+      {
+        "path": "training.log",
+        "sha256": "842f2edae9d7a5157146dc52d8d631843f2b00b0b542bb08ca89c1bbae5a1434",
+        "size": 1215
+      }
+    ],
+    "missing_required_patterns": [
+      "summary.csv",
+      "summary.md",
+      "plan.json",
+      "data_config.json",
+      "dataset_snapshot.json",
+      "trials/V0_MASTER/attempt_*/best.pt",
+      "trials/V0_MASTER/attempt_*/last.pt",
+      "trials/V0_MASTER/attempt_*/config.json",
+      "trials/V0_MASTER/attempt_*/metrics.json",
+      "trials/V0_MASTER/attempt_*/history.json",
+      "trials/V0_MASTER/attempt_*/epoch_metrics.csv",
+      "trials/V0_MASTER/attempt_*/epoch_ic.png",
+      "trials/V0_MASTER/attempt_*/full_cumulative_ic_rankic.png",
+      "trials/V0_MASTER/attempt_*/train_daily_metrics.csv",
+      "trials/V0_MASTER/attempt_*/valid_daily_metrics.csv",
+      "trials/V0_MASTER/attempt_*/test_daily_metrics.csv",
+      "trials/V6_MASTER/attempt_*/best.pt",
+      "trials/V6_MASTER/attempt_*/last.pt",
+      "trials/V6_MASTER/attempt_*/config.json",
+      "trials/V6_MASTER/attempt_*/metrics.json",
+      "trials/V6_MASTER/attempt_*/history.json",
+      "trials/V6_MASTER/attempt_*/epoch_metrics.csv",
+      "trials/V6_MASTER/attempt_*/epoch_ic.png",
+      "trials/V6_MASTER/attempt_*/full_cumulative_ic_rankic.png",
+      "trials/V6_MASTER/attempt_*/train_daily_metrics.csv",
+      "trials/V6_MASTER/attempt_*/valid_daily_metrics.csv",
+      "trials/V6_MASTER/attempt_*/test_daily_metrics.csv"
+    ]
+  }
+}
