@@ -6,3 +6,4 @@
 |---|---|---|
 | [attention7-3800-lr1e3-wd1e4-seed42-20261114](attention7-3800-lr1e3-wd1e4-seed42-20261114/README.md) | failed | [result-attention7-3800-lr1e3-wd1e4-seed42-20261114](https://github.com/ai-macro-quant/experiment-queue/releases/tag/result-attention7-3800-lr1e3-wd1e4-seed42-20261114) |
 | [attention7-3800-lr1e3-wd1e4-seed42-retry1-20261114](attention7-3800-lr1e3-wd1e4-seed42-retry1-20261114/README.md) | completed | [result-attention7-3800-lr1e3-wd1e4-seed42-retry1-20261114](https://github.com/ai-macro-quant/experiment-queue/releases/tag/result-attention7-3800-lr1e3-wd1e4-seed42-retry1-20261114) |
+| [zz1000-master-v0-v6-single-300-20261114-181428](zz1000-master-v0-v6-single-300-20261114-181428/README.md) | failed | [result-zz1000-master-v0-v6-single-300-20261114-181428](https://github.com/ai-macro-quant/experiment-queue/releases/tag/result-zz1000-master-v0-v6-single-300-20261114-181428) |
