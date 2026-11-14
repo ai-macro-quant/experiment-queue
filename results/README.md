@@ -1,3 +1,5 @@
 # Result records
 
-当前没有结果记录。完成任务后运行 `python3 queue.py refresh-index --repo ai-macro-quant/experiment-queue` 刷新索引。
+| Task | Status | Results |
+|---|---|---|
+| [system-smoke-1794636081](system-smoke-1794636081.json) | completed | [result-system-smoke-1794636081](../../releases/tag/result-system-smoke-1794636081) |
