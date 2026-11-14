@@ -1,8 +1,9 @@
 {
   "task_id": "system-smoke-1794636081",
-  "status": "running",
+  "status": "completed",
   "worker": "local-system-verification",
-  "claimed_at": "2026-11-14T06:08:49+00:00",
-  "claim_commit": "c0887b53c8eb46d9e76679bf0cdbcf00d830571d",
-  "updated_at": "2026-11-14T06:08:51+00:00"
+  "exit_code": 0,
+  "missing_required_patterns": [],
+  "result_sha256": "987621a55ccb17847694f09936060fbe7f9a062fe3b952717095d570071222b1",
+  "updated_at": "2026-11-14T06:09:10+00:00"
 }
