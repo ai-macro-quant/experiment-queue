@@ -1,0 +1,96 @@
+{
+  "id": "attention7-3800-lr1e4-wd1e2-seed42-20261116",
+  "title": "七市场因子独立Attention：AdamW lr=0.0001，wd=0.01，早停20；对照上一版",
+  "project": "/Users/y-feng/Desktop/富果投资/华泰注意力门控项目/queue_submission/attention7_lr1e4_wd1e2_20261116",
+  "command": [
+    "{python}",
+    "-u",
+    "-m",
+    "src.train",
+    "--config",
+    "config.json",
+    "--env-file",
+    "{env_file}",
+    "--output",
+    "{output_dir}/run"
+  ],
+  "required_patterns": [
+    "run/best.pt",
+    "run/config.json",
+    "run/metrics.json",
+    "run/history.json",
+    "run/epoch_metrics.csv",
+    "run/epoch_ic.png",
+    "run/full_cumulative_ic.png",
+    "run/train_daily_metrics.csv",
+    "run/valid_daily_metrics.csv",
+    "run/test_daily_metrics.csv",
+    "run/full_daily_metrics.csv",
+    "run/test_attention/metadata.json",
+    "run/test_attention/*.npz"
+  ],
+  "package_sha256": "0d3891b14b8d03aa883d7a03115cf3eb15aa86e849045f45058d965fd626b05c",
+  "package_bytes": 24245,
+  "source_manifest": {
+    "format": 1,
+    "files": [
+      {
+        "path": "README.md",
+        "sha256": "ec341ecea10094fe73ac51e8910756846e70da29ec718225f3c0aee52fac9bde",
+        "size": 1241
+      },
+      {
+        "path": "config.json",
+        "sha256": "426865013bb121e6bf18982152bb0ac3703d38ff045d0f7e95cb2345700b44d6",
+        "size": 1741
+      },
+      {
+        "path": "requirements.txt",
+        "sha256": "2f08e3d2f606bad0be60624f935d697f08ae092b673a1a297c17e4a919f97133",
+        "size": 93
+      },
+      {
+        "path": "src/Attention.py",
+        "sha256": "1bb525b4608bf8b892549802653ffa0d48f6aa8451fc50cf9b7798922098fffe",
+        "size": 3162
+      },
+      {
+        "path": "src/check_factor_scale.py",
+        "sha256": "4fb432623ca01606b108cdd4b428e5dd13da63a2e4893c71069df6e9e1de3e13",
+        "size": 3317
+      },
+      {
+        "path": "src/data.py",
+        "sha256": "4f4fe68f7657fff031c828d80ebe2a2323ba298d0ffc5e55da940b34eb143768",
+        "size": 13600
+      },
+      {
+        "path": "src/database.py",
+        "sha256": "6287ba1b13f6d0dbacdf71dda8f0c17bde9e59651622266cf9ea0d319864bda6",
+        "size": 3337
+      },
+      {
+        "path": "src/train.py",
+        "sha256": "eee82a8fda5910a75ddd32cfc99552caa9d16f9886330ab551bfb0c22d5b4d13",
+        "size": 4504
+      },
+      {
+        "path": "src/trainer.py",
+        "sha256": "e7ce9bc9580a8a45eea177e21126a3ea58935961a54ddb681b910ecb1067e564",
+        "size": 11335
+      },
+      {
+        "path": "src/universe.py",
+        "sha256": "d27a1743e5227db673f785e46ab0669949daa4e0d0fcddb866b5597abdb7070c",
+        "size": 1140
+      },
+      {
+        "path": "tests/test_pipeline.py",
+        "sha256": "9b2577d9c042faba429bad3c5746d42dcc592dd94244bd55002340494c329176",
+        "size": 15164
+      }
+    ]
+  },
+  "created_at": "2026-11-16T07:24:45+00:00",
+  "release_tag": "task-attention7-3800-lr1e4-wd1e2-seed42-20261116"
+}
