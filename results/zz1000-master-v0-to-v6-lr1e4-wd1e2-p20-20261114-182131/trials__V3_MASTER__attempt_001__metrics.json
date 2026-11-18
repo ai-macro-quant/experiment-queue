@@ -1,0 +1,33 @@
+{
+  "best_epoch": 35,
+  "epochs_ran": 55,
+  "device": "cpu",
+  "warmup_epochs": 5,
+  "selection_start_epoch": 6,
+  "min_epochs": 0,
+  "stop_reason": "early_stopping",
+  "early_stopping_enabled": true,
+  "evaluation_checkpoint": "best.pt",
+  "lr_reductions": 0,
+  "final_learning_rate": 0.0001,
+  "splits": {
+    "train": {
+      "days": 888,
+      "stock_days": 758929,
+      "mean_ic": 0.1200140871234292,
+      "mean_rank_ic": 0.11730891644569007
+    },
+    "valid": {
+      "days": 237,
+      "stock_days": 200210,
+      "mean_ic": 0.04506472670197703,
+      "mean_rank_ic": 0.07035763505973322
+    },
+    "test": {
+      "days": 237,
+      "stock_days": 199729,
+      "mean_ic": 0.02213179823928725,
+      "mean_rank_ic": 0.056881467605885014
+    }
+  }
+}
