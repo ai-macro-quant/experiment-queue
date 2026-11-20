@@ -1,5 +1,8 @@
 {
   "task_id": "attention7-zz1000-lr1e3-wd1e4-seed42-20261116",
-  "status": "queued",
-  "updated_at": "2026-11-16T14:52:06+00:00"
+  "status": "running",
+  "worker": "desktop-dcm9hbn-attention",
+  "claimed_at": "2026-11-20T12:54:32+00:00",
+  "claim_commit": "d0eccf7e49378c44f52a1b196345a344dee92689",
+  "updated_at": "2026-11-20T12:54:35+00:00"
 }
