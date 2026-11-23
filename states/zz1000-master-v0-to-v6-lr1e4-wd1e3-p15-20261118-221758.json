@@ -1,5 +1,8 @@
 {
   "task_id": "zz1000-master-v0-to-v6-lr1e4-wd1e3-p15-20261118-221758",
-  "status": "queued",
-  "updated_at": "2026-11-18T14:18:06+00:00"
+  "status": "running",
+  "worker": "desktop-dcm9hbn-attention",
+  "claimed_at": "2026-11-23T19:18:25+00:00",
+  "claim_commit": "3318f17968ce58d70116d25bc8a0a23cca730c8b",
+  "updated_at": "2026-11-23T19:18:29+00:00"
 }
