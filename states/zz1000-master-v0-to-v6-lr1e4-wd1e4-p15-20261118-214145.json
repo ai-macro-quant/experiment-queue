@@ -1,8 +1,9 @@
 {
   "task_id": "zz1000-master-v0-to-v6-lr1e4-wd1e4-p15-20261118-214145",
-  "status": "running",
+  "status": "completed",
   "worker": "desktop-dcm9hbn-attention",
-  "claimed_at": "2026-11-20T13:49:50+00:00",
-  "claim_commit": "0845b9bd0a1b9b2f7fdaf94b11f6216b93ce6ae9",
-  "updated_at": "2026-11-20T13:49:52+00:00"
+  "exit_code": 0,
+  "missing_required_patterns": [],
+  "result_sha256": "4c8f216c7bc59caa1560c37a7961841738d5a57d719d9a9125f46b7f11bfc8d2",
+  "updated_at": "2026-11-23T19:14:09+00:00"
 }
