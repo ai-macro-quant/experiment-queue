@@ -1,8 +1,9 @@
 {
   "task_id": "attention7-zz1000-lr1e3-wd1e4-seed42-300-20261124-130948",
-  "status": "running",
+  "status": "completed",
   "worker": "desktop-dcm9hbn-attention",
-  "claimed_at": "2026-11-24T06:26:30+00:00",
-  "claim_commit": "ad4fc1601ca6314d826d2ad68c21bb66e361a8b0",
-  "updated_at": "2026-11-24T06:26:34+00:00"
+  "exit_code": 0,
+  "missing_required_patterns": [],
+  "result_sha256": "2b1f36958b472d92aec7490989003ff574023792b84dd07f8f93e865f4d37d36",
+  "updated_at": "2026-11-24T09:31:17+00:00"
 }
