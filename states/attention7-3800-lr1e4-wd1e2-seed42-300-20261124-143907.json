@@ -1,5 +1,8 @@
 {
   "task_id": "attention7-3800-lr1e4-wd1e2-seed42-300-20261124-143907",
-  "status": "queued",
-  "updated_at": "2026-11-24T09:04:41+00:00"
+  "status": "running",
+  "worker": "desktop-dcm9hbn-attention",
+  "claimed_at": "2026-11-24T09:35:22+00:00",
+  "claim_commit": "5b1e6837e7b6364ac89191df582f9b11bb620a3a",
+  "updated_at": "2026-11-24T09:35:26+00:00"
 }
