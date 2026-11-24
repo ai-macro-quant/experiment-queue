@@ -1,0 +1,128 @@
+{
+  "id": "attention7-zz1000-lr1e3-wd1e4-seed42-300-20261124-130948",
+  "title": "中证1000七市场因子Attention｜lr0.001 wd0.0001 seed42｜关闭早停跑满300轮",
+  "project": "/Users/y-feng/Desktop/富果投资/数据库使用/实验部署/attention7_ZZ1000_300_20261124-130948",
+  "command": [
+    "{python}",
+    "-u",
+    "-m",
+    "src.train",
+    "--config",
+    "config.json",
+    "--env-file",
+    "{env_file}",
+    "--output",
+    "{output_dir}/run"
+  ],
+  "required_patterns": [
+    "training.log",
+    "run/config.json",
+    "run/history.json",
+    "run/epoch_metrics.csv",
+    "run/epoch_ic.png",
+    "run/best.pt",
+    "run/last.pt",
+    "run/metrics.json",
+    "run/checkpoint_comparison.json",
+    "run/train_daily_metrics.csv",
+    "run/valid_daily_metrics.csv",
+    "run/test_daily_metrics.csv",
+    "run/full_daily_metrics.csv",
+    "run/full_cumulative_ic.png",
+    "run/test_attention/metadata.json",
+    "run/test_attention/*.npz",
+    "run/last_epoch/config.json",
+    "run/last_epoch/metrics.json",
+    "run/last_epoch/train_daily_metrics.csv",
+    "run/last_epoch/valid_daily_metrics.csv",
+    "run/last_epoch/test_daily_metrics.csv",
+    "run/last_epoch/full_daily_metrics.csv",
+    "run/last_epoch/full_cumulative_ic.png",
+    "run/last_epoch/test_attention/metadata.json",
+    "run/last_epoch/test_attention/*.npz"
+  ],
+  "package_sha256": "dd2c306a44deee154dee91d2f1691cdf83bb71825f80f59905b2a1e2b15f6d0c",
+  "package_bytes": 30001,
+  "source_manifest": {
+    "format": 1,
+    "files": [
+      {
+        "path": "README.md",
+        "sha256": "ce6bd72aecbfd64e33d570cb40162816968ec53323719174d2edae12caa3f3e0",
+        "size": 1365
+      },
+      {
+        "path": "TASK.md",
+        "sha256": "449ff031582fa6716ea2c8544538da0bec967f4c02b23d29a188dc1f8fe27946",
+        "size": 2108
+      },
+      {
+        "path": "VALIDATION.json",
+        "sha256": "94e9e46cfc4f23bb5a972dc2c637b6e957afb3e635280ac987e99bd347187514",
+        "size": 2054
+      },
+      {
+        "path": "config.json",
+        "sha256": "e7086dea2c5c0fd8ed0e2ed03da17dd9babcdc1e99006ccde89fba1434ab9646",
+        "size": 1568
+      },
+      {
+        "path": "requirements.txt",
+        "sha256": "2f08e3d2f606bad0be60624f935d697f08ae092b673a1a297c17e4a919f97133",
+        "size": 93
+      },
+      {
+        "path": "src/Attention.py",
+        "sha256": "1bb525b4608bf8b892549802653ffa0d48f6aa8451fc50cf9b7798922098fffe",
+        "size": 3162
+      },
+      {
+        "path": "src/check_factor_scale.py",
+        "sha256": "4fb432623ca01606b108cdd4b428e5dd13da63a2e4893c71069df6e9e1de3e13",
+        "size": 3317
+      },
+      {
+        "path": "src/data.py",
+        "sha256": "7fff12ce2688bb05a601fe527af94a6a637cd5aa393b6791553bb93845e4de51",
+        "size": 13619
+      },
+      {
+        "path": "src/database.py",
+        "sha256": "6287ba1b13f6d0dbacdf71dda8f0c17bde9e59651622266cf9ea0d319864bda6",
+        "size": 3337
+      },
+      {
+        "path": "src/train.py",
+        "sha256": "0b6bc337f56d9b7dc3e506c98d5e01a1ad3ae798121c9bd39cd37f2d124dd10f",
+        "size": 4572
+      },
+      {
+        "path": "src/trainer.py",
+        "sha256": "1d146f3313459d46ef18ec692f2961added54a82b5dc638903cd145557f8ab24",
+        "size": 13477
+      },
+      {
+        "path": "src/universe.py",
+        "sha256": "eb2cf71de9514468c57b57a9b187d38bb5b6c762d1aa4e0e5bd3784e121f0331",
+        "size": 716
+      },
+      {
+        "path": "task_expectations.json",
+        "sha256": "2bd54c54c5e2ca94b9434348a19b5645dbd9640cbc74ee31215f96b35ed031bb",
+        "size": 1824
+      },
+      {
+        "path": "tests/test_checkpoints_300.py",
+        "sha256": "582facf65b7789c53d32b0dcbf39df56f78c5526c022c1885d9d90ed772e9bea",
+        "size": 4703
+      },
+      {
+        "path": "tests/test_pipeline.py",
+        "sha256": "7a7e936e84404618b45eff6dc23aed781c9959d2bb6d0977de3b1ecd1dfa21ed",
+        "size": 15967
+      }
+    ]
+  },
+  "created_at": "2026-11-24T06:01:47+00:00",
+  "release_tag": "task-attention7-zz1000-lr1e3-wd1e4-seed42-300-20261124-130948"
+}
