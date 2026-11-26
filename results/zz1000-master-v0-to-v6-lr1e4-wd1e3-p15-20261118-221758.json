@@ -1,0 +1,480 @@
+{
+  "task_id": "zz1000-master-v0-to-v6-lr1e4-wd1e3-p15-20261118-221758",
+  "tag": "result-zz1000-master-v0-to-v6-lr1e4-wd1e3-p15-20261118-221758",
+  "archive_sha256": "1d3256594d90545a00b57d8c823c59dea9537cf293188169d505bcbf299a7db0",
+  "assets": [
+    "results-zz1000-master-v0-to-v6-lr1e4-wd1e3-p15-20261118-221758.zip"
+  ],
+  "manifest": {
+    "task_id": "zz1000-master-v0-to-v6-lr1e4-wd1e3-p15-20261118-221758",
+    "worker": "desktop-dcm9hbn-attention",
+    "command": [
+      "{python}",
+      "-u",
+      "src/train_master_all_lr1e4_wd1e3_p15.py",
+      "--data-config",
+      "database_config.json",
+      "--learning-rate",
+      "0.0001",
+      "--weight-decay",
+      "0.001",
+      "--dropout",
+      "0.1",
+      "--seed",
+      "42",
+      "--epochs",
+      "300",
+      "--patience",
+      "15",
+      "--warmup-epochs",
+      "5",
+      "--min-epochs",
+      "0",
+      "--lr-scheduler",
+      "none",
+      "--fail-fast",
+      "--env-file",
+      "{env_file}",
+      "--output",
+      "{output_dir}/run"
+    ],
+    "source_package_sha256": "e4bdb96bc403ffc1b54108dd1917520701544e5a5fdc0a7c00d76fc6ff248298",
+    "exit_code": 0,
+    "started_at": "2026-11-23T19:19:05+00:00",
+    "finished_at": "2026-11-26T23:28:52+00:00",
+    "latest_output_mtime": "2026-11-26T23:28:50+00:00",
+    "files": [
+      {
+        "path": "run/.sweep.lock",
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "size": 1
+      },
+      {
+        "path": "run/best_validation.json",
+        "sha256": "e86d5066328208758b83984661966f24a273bf064969e01743bd4c5a7982e5c4",
+        "size": 1900
+      },
+      {
+        "path": "run/data_config.json",
+        "sha256": "166ffc1b12ac504d83b123070a2e7acfdba804cbf56ae08fd726035bf55f6169",
+        "size": 2610
+      },
+      {
+        "path": "run/dataset_snapshot.json",
+        "sha256": "75231d0fdf0affbde01944ccd4b20e9ea6a062efe8fb8de335a1c25a38332299",
+        "size": 2108
+      },
+      {
+        "path": "run/plan.json",
+        "sha256": "70b04e570cabcfe22db4e6b62d595e0e863fb9e868f67abb9bce69817f513f47",
+        "size": 17870
+      },
+      {
+        "path": "run/summary.csv",
+        "sha256": "c5391ac987f9785f3d326b649b35086f2ba48248b9b0617827fb0ffa068dce06",
+        "size": 1659
+      },
+      {
+        "path": "run/summary.md",
+        "sha256": "eccb06d3861b464e6835aa4fbb3bccec9efde619c9b48cf4169b09089859ed8a",
+        "size": 979
+      },
+      {
+        "path": "run/sweep.log",
+        "sha256": "1e658de05566f18e4d42cb6de0533476e548810fc41189749229bc5662f0fcbb",
+        "size": 382967
+      },
+      {
+        "path": "run/trials/V0_MASTER/attempt_001/best.pt",
+        "sha256": "58c686542e83acef8dbc1c6707831d40339aa2257e1bb542bbc9f59ad7f57b58",
+        "size": 41065
+      },
+      {
+        "path": "run/trials/V0_MASTER/attempt_001/config.json",
+        "sha256": "d163fb31af3fda43f2675bb97e04dc37f1921e9955fb4b65f4afa6a09ffee99d",
+        "size": 4236
+      },
+      {
+        "path": "run/trials/V0_MASTER/attempt_001/epoch_ic.png",
+        "sha256": "19e8ab801cca7ccbeb8ffbb6ddbc27a7fe6b37798f6515b3a7af44d30039b15a",
+        "size": 94399
+      },
+      {
+        "path": "run/trials/V0_MASTER/attempt_001/epoch_metrics.csv",
+        "sha256": "fbf7b82fa08bf5c47f4349c1e748ff7760e5affc8b7f5d54c94be27d146e06d5",
+        "size": 8210
+      },
+      {
+        "path": "run/trials/V0_MASTER/attempt_001/full_cumulative_ic_rankic.png",
+        "sha256": "ef48d25db44873bb11cc17dde20ee541ad547609e5859b1095dcea686bf4d0e2",
+        "size": 159869
+      },
+      {
+        "path": "run/trials/V0_MASTER/attempt_001/history.json",
+        "sha256": "0022253cff6ef13aeb8608f6ef8e63f5fe1b0c37acbeebfbaa6b21dde3f998f0",
+        "size": 36263
+      },
+      {
+        "path": "run/trials/V0_MASTER/attempt_001/metrics.json",
+        "sha256": "a07bfb345565bd9eb9dcebb5d02c24991cc35516ba30fa2aed347240689b1951",
+        "size": 792
+      },
+      {
+        "path": "run/trials/V0_MASTER/attempt_001/test_daily_metrics.csv",
+        "sha256": "5bcc59a5810abf7ddee47354f308e275b335afe494ba8da0b883e736fa1a7d0f",
+        "size": 22492
+      },
+      {
+        "path": "run/trials/V0_MASTER/attempt_001/train_daily_metrics.csv",
+        "sha256": "55c3ed4040c21faa721dc6e5a39003cf803a756fb9589f2cdc99d2cf788e7e69",
+        "size": 82283
+      },
+      {
+        "path": "run/trials/V0_MASTER/attempt_001/valid_daily_metrics.csv",
+        "sha256": "bff901bf44b5c4d310564ac088ef2fcc57497f1d39e1ce6942a3084a0c54bcc7",
+        "size": 22288
+      },
+      {
+        "path": "run/trials/V0_MASTER/state.json",
+        "sha256": "016494f5a3c8465eb910fd4f2ef9b372e7fddf07a6cd5ac34bf17752a179ede3",
+        "size": 60
+      },
+      {
+        "path": "run/trials/V1_MASTER/attempt_001/best.pt",
+        "sha256": "f98bcff4ef84f726a0158dc95e37883b29864ac30b5c35cba337ab16996f4bf5",
+        "size": 42653
+      },
+      {
+        "path": "run/trials/V1_MASTER/attempt_001/config.json",
+        "sha256": "1798a09fd71a37dbe789fee2800f6afa6ec87fabc87a15a5dc14109ebfd1084e",
+        "size": 4236
+      },
+      {
+        "path": "run/trials/V1_MASTER/attempt_001/epoch_ic.png",
+        "sha256": "2c58c6be32e0842b75514a0d0d8db393e2666bba4ff50de2ea0ad2543bbae3ce",
+        "size": 87602
+      },
+      {
+        "path": "run/trials/V1_MASTER/attempt_001/epoch_metrics.csv",
+        "sha256": "7ea3df4b0988af40997e6752de21b3c7843d8b442c58b95d9a56c54639ad61d9",
+        "size": 5811
+      },
+      {
+        "path": "run/trials/V1_MASTER/attempt_001/full_cumulative_ic_rankic.png",
+        "sha256": "988ce5caf48a7881baaa61484dad4e1a23c8a4810663e32b54a1eec5726699af",
+        "size": 160799
+      },
+      {
+        "path": "run/trials/V1_MASTER/attempt_001/history.json",
+        "sha256": "306d7ef9f876907fff724203f73855dc4c349342cac57170e787c22011967d41",
+        "size": 25336
+      },
+      {
+        "path": "run/trials/V1_MASTER/attempt_001/metrics.json",
+        "sha256": "c8f3ea24cb6c53e617127d9bf2c123b8c98a757e94dbd996c6fb4cfd2943b2d7",
+        "size": 794
+      },
+      {
+        "path": "run/trials/V1_MASTER/attempt_001/test_daily_metrics.csv",
+        "sha256": "b71dea6110278764a250325ca241c1d48c76fbbfdcee999fd6c4d78599348d41",
+        "size": 22528
+      },
+      {
+        "path": "run/trials/V1_MASTER/attempt_001/train_daily_metrics.csv",
+        "sha256": "b0c6d5aa22d358008f71d2bc123f852b44469a198eee23bf47c0f42698614d5f",
+        "size": 82311
+      },
+      {
+        "path": "run/trials/V1_MASTER/attempt_001/valid_daily_metrics.csv",
+        "sha256": "7729ae874b947ba3d2c755acbc32185718a672993ce5d051dcab59b2b82b1c64",
+        "size": 22271
+      },
+      {
+        "path": "run/trials/V1_MASTER/state.json",
+        "sha256": "016494f5a3c8465eb910fd4f2ef9b372e7fddf07a6cd5ac34bf17752a179ede3",
+        "size": 60
+      },
+      {
+        "path": "run/trials/V2_MASTER/attempt_001/best.pt",
+        "sha256": "9d26979d5f9cd85ad27cbe9abdc9a7f03d3d14cf3a0dbd1f11a2ed469f9fb95d",
+        "size": 46789
+      },
+      {
+        "path": "run/trials/V2_MASTER/attempt_001/config.json",
+        "sha256": "12a40ccf8c011da45849977824491b9c23da6789c96c9a70224b89804272dfab",
+        "size": 4236
+      },
+      {
+        "path": "run/trials/V2_MASTER/attempt_001/epoch_ic.png",
+        "sha256": "979e1828aaada7eba1db7042ca6f301a4e5b625e4c1b472b66eec5e569f9683d",
+        "size": 90787
+      },
+      {
+        "path": "run/trials/V2_MASTER/attempt_001/epoch_metrics.csv",
+        "sha256": "2c92abf7d2c57cbe3cbe982857ab585fca30017d8daa760c044088c74d85858c",
+        "size": 8519
+      },
+      {
+        "path": "run/trials/V2_MASTER/attempt_001/full_cumulative_ic_rankic.png",
+        "sha256": "dc52b3d7c7a3ed7d1c6a393925d1c5b4df91a0d5e6090b26d109d42e582a781b",
+        "size": 166479
+      },
+      {
+        "path": "run/trials/V2_MASTER/attempt_001/history.json",
+        "sha256": "d8491153e952f8b5db950f78737184d1125acef877c17e4c44a1199065de247c",
+        "size": 37638
+      },
+      {
+        "path": "run/trials/V2_MASTER/attempt_001/metrics.json",
+        "sha256": "66f2330ef4c2b03d26445969f0c9491453b110888adaeb0dd1f3e457db97c976",
+        "size": 794
+      },
+      {
+        "path": "run/trials/V2_MASTER/attempt_001/test_daily_metrics.csv",
+        "sha256": "75f50bd0334cc75b09a5b49a09ba9a954784951657b8f2af31af05f9da027716",
+        "size": 22475
+      },
+      {
+        "path": "run/trials/V2_MASTER/attempt_001/train_daily_metrics.csv",
+        "sha256": "4282ac0cfbd3674d526923005580df93af9c7060c1c8a1e8011be9d63a63fbe8",
+        "size": 82450
+      },
+      {
+        "path": "run/trials/V2_MASTER/attempt_001/valid_daily_metrics.csv",
+        "sha256": "129fccbaf0825d7635a0fe7024b6c0a853bbae48579e04758ecb73ed83c71d62",
+        "size": 22321
+      },
+      {
+        "path": "run/trials/V2_MASTER/state.json",
+        "sha256": "016494f5a3c8465eb910fd4f2ef9b372e7fddf07a6cd5ac34bf17752a179ede3",
+        "size": 60
+      },
+      {
+        "path": "run/trials/V3_MASTER/attempt_001/best.pt",
+        "sha256": "2e4ab152e7c43931f8e33408564b8aace85b199b188f3dbe35e12e737879617d",
+        "size": 46789
+      },
+      {
+        "path": "run/trials/V3_MASTER/attempt_001/config.json",
+        "sha256": "c2927b8f70ac34441709d52f08ccbdbf91c66c2485116eaddf692d6751b18d5e",
+        "size": 4236
+      },
+      {
+        "path": "run/trials/V3_MASTER/attempt_001/epoch_ic.png",
+        "sha256": "a7b09b1cc63c8b9c758b087d309e19b6797815adff6da211c6dfe93362c328c2",
+        "size": 91821
+      },
+      {
+        "path": "run/trials/V3_MASTER/attempt_001/epoch_metrics.csv",
+        "sha256": "06877d2a52cd15bb8d7da20b2dd08e868f4bf66e1ccc8b09e49f037ae2e6329a",
+        "size": 7752
+      },
+      {
+        "path": "run/trials/V3_MASTER/attempt_001/full_cumulative_ic_rankic.png",
+        "sha256": "0e24b36df56cd5a8b502277a40873161258a48fdb940923805dd2c9494f3a509",
+        "size": 152197
+      },
+      {
+        "path": "run/trials/V3_MASTER/attempt_001/history.json",
+        "sha256": "9ae7f13f1642bae736ca2963fddf50ceb588ea35e7a6152c8e581111dc9a6e56",
+        "size": 34206
+      },
+      {
+        "path": "run/trials/V3_MASTER/attempt_001/metrics.json",
+        "sha256": "8d0bf6ea79cc803fe47e269b715dc99feca3b2df488bf3b1ade85ecfe26879a9",
+        "size": 793
+      },
+      {
+        "path": "run/trials/V3_MASTER/attempt_001/test_daily_metrics.csv",
+        "sha256": "2d2a15e32e6e1ef37eedabe7b9b10c09163e435ffff0cedb740f66d30c3eb70f",
+        "size": 22434
+      },
+      {
+        "path": "run/trials/V3_MASTER/attempt_001/train_daily_metrics.csv",
+        "sha256": "06436fd17c31998234c03408ba96f950ba3b06d2d666bed92385bbf4f4367caf",
+        "size": 82242
+      },
+      {
+        "path": "run/trials/V3_MASTER/attempt_001/valid_daily_metrics.csv",
+        "sha256": "2bb79a910589350efd94421a2cd7c87e5a390b9476f007d729d016e9792dee4e",
+        "size": 22361
+      },
+      {
+        "path": "run/trials/V3_MASTER/state.json",
+        "sha256": "016494f5a3c8465eb910fd4f2ef9b372e7fddf07a6cd5ac34bf17752a179ede3",
+        "size": 60
+      },
+      {
+        "path": "run/trials/V4_MASTER/attempt_001/best.pt",
+        "sha256": "9ec5d54c80572f4375f1c9cacc42fad387d8c103d07ea53769edad94ff49758a",
+        "size": 47103
+      },
+      {
+        "path": "run/trials/V4_MASTER/attempt_001/config.json",
+        "sha256": "5d7d2b7be13d6c0dd67d1fea18d487779ebe40bb355871497895b4d2a56c0adf",
+        "size": 4236
+      },
+      {
+        "path": "run/trials/V4_MASTER/attempt_001/epoch_ic.png",
+        "sha256": "2582bdac798a2fa3ada881bfbb5a3dd2cf91dcda5905ed73f82e0ef12daee987",
+        "size": 91118
+      },
+      {
+        "path": "run/trials/V4_MASTER/attempt_001/epoch_metrics.csv",
+        "sha256": "1803a0de104edaa4bea35a32d1eb8e888fcd089979abb6f2a2c705dbe7d4d629",
+        "size": 7595
+      },
+      {
+        "path": "run/trials/V4_MASTER/attempt_001/full_cumulative_ic_rankic.png",
+        "sha256": "a529e948746ca394e88f940c0de408426c318f06f13ab05125dfd5c19712a6c7",
+        "size": 155420
+      },
+      {
+        "path": "run/trials/V4_MASTER/attempt_001/history.json",
+        "sha256": "5e2e6e953012354615a78301485802ffba635fe307339b5878ace7ba16653c41",
+        "size": 33516
+      },
+      {
+        "path": "run/trials/V4_MASTER/attempt_001/metrics.json",
+        "sha256": "f75b00631b87fd38f4d7d5fde2a6ca0f8723c2530ad7dc7bb98f6c5c7dc24016",
+        "size": 793
+      },
+      {
+        "path": "run/trials/V4_MASTER/attempt_001/test_daily_metrics.csv",
+        "sha256": "29a0263a4e18cd46c4aaba3a8d013654cc5478f33ef2d97229080ef2107dd402",
+        "size": 22413
+      },
+      {
+        "path": "run/trials/V4_MASTER/attempt_001/train_daily_metrics.csv",
+        "sha256": "9398d46e41dd8a2c62cff3a106b48612ad7b5b50b0bfe6773386027f4aa7b2b3",
+        "size": 82237
+      },
+      {
+        "path": "run/trials/V4_MASTER/attempt_001/valid_daily_metrics.csv",
+        "sha256": "048428ef375cc21b626b97b0a7f6dc67850617a38eefd8c56a165a41cfb655e3",
+        "size": 22357
+      },
+      {
+        "path": "run/trials/V4_MASTER/state.json",
+        "sha256": "016494f5a3c8465eb910fd4f2ef9b372e7fddf07a6cd5ac34bf17752a179ede3",
+        "size": 60
+      },
+      {
+        "path": "run/trials/V5_MASTER/attempt_001/best.pt",
+        "sha256": "621ceb342d1cec0c3557d8f8df34e39e34d94d7012db0f34241424efab9e445b",
+        "size": 60851
+      },
+      {
+        "path": "run/trials/V5_MASTER/attempt_001/config.json",
+        "sha256": "791ef31e6fea493b403249b026f7b0507be05147c1c111d41c408cf29cafda44",
+        "size": 4236
+      },
+      {
+        "path": "run/trials/V5_MASTER/attempt_001/epoch_ic.png",
+        "sha256": "52f74676239e178b584843a64b1f46309c13702460db8fc1dd23f60aceb00b0e",
+        "size": 87879
+      },
+      {
+        "path": "run/trials/V5_MASTER/attempt_001/epoch_metrics.csv",
+        "sha256": "54113e6dff923318d2b40eeaa440967a59d6ed7484d9c22076ac7d369d59db18",
+        "size": 7579
+      },
+      {
+        "path": "run/trials/V5_MASTER/attempt_001/full_cumulative_ic_rankic.png",
+        "sha256": "14182301709557361d1a854dfb7894d2c389622930dd53384a4e0e3f53cc910b",
+        "size": 155416
+      },
+      {
+        "path": "run/trials/V5_MASTER/attempt_001/history.json",
+        "sha256": "a880645dc1a1d13e8618109542a2556e8571ced9f6f1b61a82b4d7db2d3442b5",
+        "size": 33500
+      },
+      {
+        "path": "run/trials/V5_MASTER/attempt_001/metrics.json",
+        "sha256": "96455ae45cd8bd39f50d28f0e45707cbea4def03f3e7944beeefb0a6251cc73e",
+        "size": 791
+      },
+      {
+        "path": "run/trials/V5_MASTER/attempt_001/test_daily_metrics.csv",
+        "sha256": "189b936589b9665d06047c8082e3e0bf78c1434bd878abeff5b78fca7c414314",
+        "size": 22543
+      },
+      {
+        "path": "run/trials/V5_MASTER/attempt_001/train_daily_metrics.csv",
+        "sha256": "b2e78b780f06ee31ac48ae1d37ef304860ddf4519de7631b718e8d359e00019a",
+        "size": 82262
+      },
+      {
+        "path": "run/trials/V5_MASTER/attempt_001/valid_daily_metrics.csv",
+        "sha256": "21684e82969bfe98dcf28cbbce72bfaf9ca0706889e052c15abbf6c0c3417c30",
+        "size": 22330
+      },
+      {
+        "path": "run/trials/V5_MASTER/state.json",
+        "sha256": "016494f5a3c8465eb910fd4f2ef9b372e7fddf07a6cd5ac34bf17752a179ede3",
+        "size": 60
+      },
+      {
+        "path": "run/trials/V6_MASTER/attempt_001/best.pt",
+        "sha256": "a0e7075c84a7c7f71333a9d60a44596df5bb2debe6817e23937b3b61cb85b52a",
+        "size": 69379
+      },
+      {
+        "path": "run/trials/V6_MASTER/attempt_001/config.json",
+        "sha256": "c9548093971135356ad1df82a9da27a3c27af03a6310442ae81f06dd484ede70",
+        "size": 4236
+      },
+      {
+        "path": "run/trials/V6_MASTER/attempt_001/epoch_ic.png",
+        "sha256": "4500255bee4e3b93c37c80b4d7b3a9ccc13ba621ab7111acb05c82a579bf9546",
+        "size": 89319
+      },
+      {
+        "path": "run/trials/V6_MASTER/attempt_001/epoch_metrics.csv",
+        "sha256": "f2bd32dc458e204d46293291aa344b7def90dc46a231211246a5758e04952d3e",
+        "size": 7454
+      },
+      {
+        "path": "run/trials/V6_MASTER/attempt_001/full_cumulative_ic_rankic.png",
+        "sha256": "4f2ab8de0ed50bc3120defc129172cb7dcdbc6fd280b18299c81e6de7300f55a",
+        "size": 150350
+      },
+      {
+        "path": "run/trials/V6_MASTER/attempt_001/history.json",
+        "sha256": "037b2e61eaa77603cf7acc69bfd5363bb76b5b91753a5587bc3402629dacd4a6",
+        "size": 32842
+      },
+      {
+        "path": "run/trials/V6_MASTER/attempt_001/metrics.json",
+        "sha256": "f4d4d3b13a96847e03a1c3a55161e628091ba1ac46d3d44abc4b2fa932ed65a8",
+        "size": 795
+      },
+      {
+        "path": "run/trials/V6_MASTER/attempt_001/test_daily_metrics.csv",
+        "sha256": "2bc8107d7a8d7b492d365c086a8682888109dffcbdfcac5ab473ad96f037b17f",
+        "size": 22300
+      },
+      {
+        "path": "run/trials/V6_MASTER/attempt_001/train_daily_metrics.csv",
+        "sha256": "3c9ed29a79764bf67021d3cf5b7395d719e6354f886267af673c70b563b5d93f",
+        "size": 82218
+      },
+      {
+        "path": "run/trials/V6_MASTER/attempt_001/valid_daily_metrics.csv",
+        "sha256": "b53f3c6e1e192cab4adb509df8c036f8c442b08f2ed787609198b437027a46ac",
+        "size": 22203
+      },
+      {
+        "path": "run/trials/V6_MASTER/state.json",
+        "sha256": "016494f5a3c8465eb910fd4f2ef9b372e7fddf07a6cd5ac34bf17752a179ede3",
+        "size": 60
+      },
+      {
+        "path": "training.log",
+        "sha256": "083d05973d671d675b401be14752de3895982d971dcda4c5e19e1c88673765b4",
+        "size": 383351
+      }
+    ],
+    "missing_required_patterns": []
+  }
+}
