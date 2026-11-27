@@ -16,7 +16,7 @@ import sys
 import tempfile
 import time
 import zipfile
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path, PurePosixPath
 from typing import Any
 
@@ -193,6 +193,26 @@ def submit(a: argparse.Namespace) -> None:
         print(f"已提交 {task_id}，包 SHA256 {package_sha}")
     finally: shutil.rmtree(tmp, ignore_errors=True)
 
+def result_sort_time(task_id: str, task: dict, state: dict) -> datetime:
+    created_at = task.get("created_at")
+    if created_at:
+        return datetime.fromisoformat(created_at.replace("Z", "+00:00"))
+
+    # Manually imported experiments use Beijing time in the task ID.
+    match = re.search(r"-(\d{8})(?:-(\d{6}))?$", task_id)
+    if match:
+        try:
+            return datetime.strptime(match[1] + (match[2] or "000000"), "%Y%m%d%H%M%S").replace(
+                tzinfo=timezone(timedelta(hours=8))
+            )
+        except ValueError:
+            pass
+
+    updated_at = state.get("updated_at")
+    if updated_at:
+        return datetime.fromisoformat(updated_at.replace("Z", "+00:00"))
+    return datetime.max.replace(tzinfo=timezone.utc)
+
 def index_text(ghc: GitHub, directory: str, title: str, exclude_readme: bool = False) -> str:
     items = ghc.list_dir(directory); rows = [f"# {title}", "", "[返回实验中心](../README.md)", ""]
     if directory == "tasks":
@@ -209,14 +229,27 @@ def index_text(ghc: GitHub, directory: str, title: str, exclude_readme: bool = F
                 rows.append(f"| [{tid}]({name}) | {states.get(tid, 'unknown')} | {task.get('title', '')} | [task-{tid}](https://github.com/{ghc.repo}/releases/tag/task-{tid}) |")
         return "\n".join(rows) + "\n"
     if directory == "results":
-        rows += ["| 任务 | 状态 | 完整训练结果 |", "|---|---|---|"]
-        for x in sorted(items, key=lambda y: y.get("name", "")):
-            name = x.get("name", "")
+        rows += ["| 序号 | 任务 | 状态 | 完整训练结果 |", "|---:|---|---|---|"]
+        preview_dirs = {item["name"] for item in items if item.get("type") == "dir"}
+        results = []
+        for item in items:
+            name = item.get("name", "")
             if name.endswith(".json"):
-                result = json.loads(ghc.get_file(directory + "/" + name)[1]); tid = name[:-5]
+                tid = name[:-5]
+                result = json.loads(ghc.get_file(f"results/{name}")[1])
                 st = ghc.get_file("states/" + name)
-                status = json.loads(st[1]).get("status", "unknown") if st else "unknown"
-                rows.append(f"| [{tid}]({name}) | {status} | [result-{tid}](https://github.com/{ghc.repo}/releases/tag/result-{tid}) |")
+                state = json.loads(st[1]) if st else {}
+                status = state.get("status", "unknown")
+                task_file = ghc.get_file(f"tasks/{name}")
+                if not task_file and status == "failed":
+                    task_file = ghc.get_file(f"archive/failed/tasks/{name}")
+                task = json.loads(task_file[1]) if task_file else {}
+                preview = f"{tid}/README.md"
+                link = preview if tid in preview_dirs and ghc.get_file(f"results/{preview}") else name
+                tag = result.get("tag", f"result-{tid}")
+                results.append((result_sort_time(tid, task, state), tid, status, link, tag))
+        for number, (_, tid, status, link, tag) in enumerate(sorted(results), start=1):
+            rows.append(f"| {number} | [{tid}]({link}) | {status} | [{tag}](https://github.com/{ghc.repo}/releases/tag/{tag}) |")
         return "\n".join(rows) + "\n"
     for x in sorted(items, key=lambda y: y.get("name", "")):
         name = x.get("name", "")
